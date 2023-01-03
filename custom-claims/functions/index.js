@@ -36,3 +36,15 @@ exports.addCustomclaim = functions.https.onCall((data, context) => {
 
         })
 })
+
+// CronJobs
+// metodo pub/sub -> 
+// metodo schedule recibe como parametro el tiempo o en que periodo de tiempo se deb ejecutar la funcion
+// este schedule recibe tanto lenguaje natural en ingles como codigos crontab revisar la siguiente pagina: https://crontab.guru/#5_4_04_*_*
+// despues se ejecuta el metodo onRun donde se va a ejecutar todo el codigo que se va a ejecutar en determinado tiempo
+// exports.cadaDosMinutos = functions.pubsub
+//     .schedule('every 2 minutes')
+//     .onRun(context => {
+//         console.log('cron job ejecutado');
+//         functions.logger.info('cron job ejecutado, paps')
+//     })
